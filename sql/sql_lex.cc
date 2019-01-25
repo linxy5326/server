@@ -2354,6 +2354,7 @@ void st_select_lex::init_query()
   tvc= 0;
   in_tvc= false;
   versioned_tables= 0;
+  pushdown_select= 0;
 }
 
 void st_select_lex::init_select()
@@ -9462,3 +9463,4 @@ bool SELECT_LEX::make_unique_derived_name(THD *thd, LEX_CSTRING *alias)
   alias->str= thd->strmake(buff, alias->length);
   return !alias->str;
 }
+    
